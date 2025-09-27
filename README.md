@@ -73,7 +73,9 @@ voltage = (avg * 3300) / 4095;  // chuyển sang mV
 Mở Hercules (Serial, COMx, Baud 115200) → màn hình sẽ in ra:
 
 Voltage: 1234 mV
+
 Voltage: 2500 mV
+
 Voltage: 3300 mV
 
 
