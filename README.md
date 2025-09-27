@@ -44,10 +44,15 @@ IDE: Keil uVision5
 Thư viện: STM32F10x Standard Peripheral Library
 
 Cấu hình UART1 (115200-8-N-1)
+
 USART_InitStructure.USART_BaudRate = 115200;
+
 USART_InitStructure.USART_WordLength = USART_WordLength_8b;
+
 USART_InitStructure.USART_StopBits = USART_StopBits_1;
+
 USART_InitStructure.USART_Parity = USART_Parity_No;
+
 USART_InitStructure.USART_Mode = USART_Mode_Tx | USART_Mode_Rx;
 
 Cấu hình ADC1 + DMA
@@ -61,11 +66,16 @@ DMA1 Channel1 copy dữ liệu từ ADC1->DR vào buffer adc_buffer[1000].
 Mode Circular → DMA chạy liên tục, luôn ghi đè buffer.
 
 Xử lý giá trị
+
 sum = 0;
+
 for (i = 0; i < ADC_BUF_LEN; i++) {
+
     sum += adc_buffer[i];
 }
+
 avg = sum / ADC_BUF_LEN;
+
 voltage = (avg * 3300) / 4095;  // chuyển sang mV
 
 🔹 Kết quả
